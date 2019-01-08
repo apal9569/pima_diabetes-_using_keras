@@ -1,7 +1,6 @@
 import keras
 from keras.models import Sequential
 from keras.layers import Dense
-import sklearn as sl
 from sklearn import preprocessing, model_selection
 import pandas as pd
 import numpy as np
