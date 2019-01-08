@@ -22,7 +22,7 @@ test_y=keras.utils.to_categorical(test_y)
 model=Sequential()
 model.add(Dense(16, input_dim=8, activation='relu'))
 model.add(Dense(8,activation='relu'))
-#model.add(Dense(4,activation='relu'))
+model.add(Dense(4,activation='relu'))
 model.add(Dense(2,activation='sigmoid'))
 
 model.compile(loss='binary_crossentropy',optimizer='adam',metrics=['accuracy'])
@@ -33,8 +33,5 @@ model.fit(train_x,train_y,epochs=250,batch_size=25)
 _,test_acc=model.evaluate(test_x,test_y,verbose=1)
 print('Test Accuracy:',test_acc)
 
-plt.plot(model.history.epoch, model.history.history['loss'])
-plt.xlabel('epochs')
-plt.xlabel('loss')
 
 
